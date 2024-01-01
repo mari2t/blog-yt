@@ -16,7 +16,7 @@
 # end
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins '*'  # 本番環境では具体的なオリジンを指定することを推奨します
+      origins 'localhost:3000'  
       resource '*',
         headers: :any,
         methods: [:get, :post, :put, :patch, :delete, :options, :head]
